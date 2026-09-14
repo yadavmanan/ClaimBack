@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@import "@fontsource/fraunces/400.css";
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600.css";
+@import "@fontsource/fraunces/600-italic.css";
+@import "@fontsource/public-sans/400.css";
+@import "@fontsource/public-sans/500.css";
+@import "@fontsource/public-sans/600.css";
+@import "@fontsource/public-sans/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "@fontsource/press-start-2p/400.css";
+
+@theme {
+  /* Default FinTech Crisp palette (Stripe / Linear modern SaaS white & slate) */
+  --color-cream: #f8fafc;
+  --color-cream-100: #f1f5f9;
+  --color-cream-200: #e2e8f0;
+  --color-ink: #0f172a;
+  --color-ink-soft: #475569;
+  --color-ink-faint: #94a3b8;
+  --color-hairline: #e2e8f0;
+
+  --color-forest: #059669;
+  --color-forest-dim: #047857;
+  --color-forest-soft: #d1fae5;
+
+  --color-alert: #d97706;
+  --color-alert-soft: #fef3c7;
+
+  --color-hackathon-green: #39ff6a;
+  --color-hackathon-pink: #ff3ea5;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-pixel: "Press Start 2P", monospace;
+}
+
+/* FinTech Crisp (Default: Modern SaaS White & Slate) */
+:root,
+html[data-theme="fintech"] {
+  --color-cream: #f8fafc;
+  --color-cream-100: #f1f5f9;
+  --color-cream-200: #e2e8f0;
+  --color-ink: #0f172a;
+  --color-ink-soft: #475569;
+  --color-ink-faint: #94a3b8;
+  --color-hairline: #e2e8f0;
+
+  --color-forest: #059669;
+  --color-forest-dim: #047857;
+  --color-forest-soft: #d1fae5;
+
+  --color-alert: #d97706;
+  --color-alert-soft: #fef3c7;
+}
+
+/* Warm Cream (Original Calm Heritage) */
+html[data-theme="cream"] {
+  --color-cream: #f7f5ef;
+  --color-cream-100: #f1eee4;
+  --color-cream-200: #e8e3d4;
+  --color-ink: #171712;
+  --color-ink-soft: #4a4740;
+  --color-ink-faint: #8a8578;
+  --color-hairline: #ddd7c6;
+
+  --color-forest: #1f5d3a;
+  --color-forest-dim: #16452b;
+  --color-forest-soft: #e3ede6;
+
+  --color-alert: #c9622a;
+  --color-alert-soft: #f7e6da;
+}
+
+/* Obsidian & Mint (Modern Dark Mode / AI Agent Terminal) */
+html[data-theme="obsidian"] {
+  --color-cream: #090d14;
+  --color-cream-100: #121822;
+  --color-cream-200: #1c2635;
+  --color-ink: #f8fafc;
+  --color-ink-soft: #94a3b8;
+  --color-ink-faint: #64748b;
+  --color-hairline: #1e293b;
+
+  --color-forest: #10b981;
+  --color-forest-dim: #059669;
+  --color-forest-soft: #064e3b;
+
+  --color-alert: #f59e0b;
+  --color-alert-soft: #451a03;
+}
+
+/* Swiss Editorial (Luxury Alabaster & Racing Green) */
+html[data-theme="swiss"] {
+  --color-cream: #fbfbfa;
+  --color-cream-100: #f4f3ef;
+  --color-cream-200: #eae8e1;
+  --color-ink: #141413;
+  --color-ink-soft: #6e6a64;
+  --color-ink-faint: #9c978f;
+  --color-hairline: #e7e5e0;
+
+  --color-forest: #144d32;
+  --color-forest-dim: #0d3824;
+  --color-forest-soft: #e2ede7;
+
+  --color-alert: #bc4726;
+  --color-alert-soft: #fbeae5;
+}
+
+/* Glacier Clarity (Ice Blue & Electric Cobalt) */
+html[data-theme="glacier"] {
+  --color-cream: #f0f4f8;
+  --color-cream-100: #e2e8f0;
+  --color-cream-200: #cbd5e1;
+  --color-ink: #0b1329;
+  --color-ink-soft: #475569;
+  --color-ink-faint: #64748b;
+  --color-hairline: #cbd5e1;
+
+  --color-forest: #2563eb;
+  --color-forest-dim: #1d4ed8;
+  --color-forest-soft: #dbeafe;
+
+  --color-alert: #ea580c;
+  --color-alert-soft: #ffedd5;
+}
+
+/* Obsidian card handling for dark mode */
+html[data-theme="obsidian"] .bg-white\/60,
+html[data-theme="obsidian"] .bg-white\/70,
+html[data-theme="obsidian"] .bg-white {
+  background-color: #121822 !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: var(--color-forest);
+  color: #ffffff;
+}
