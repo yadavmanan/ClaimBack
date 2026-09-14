@@ -159,27 +159,3 @@ The project is set up so you can iterate locally without needing a production de
 3. Upload sample documents or use the built-in demo flow.
 4. Review opportunities, drafts, and audit events in the app.
 5. Approve or dismiss claims before submission.
-
-## Public repo guidance
-
-Before opening this project publicly:
-
-- Remove real AWS account identifiers
-- Remove personal email addresses or bucket names
-- Keep only generic placeholders in the sample env files
-- Ensure any credentials are stored in local `.env` files only
-- Document setup clearly for anyone cloning the repo
-
-## License
-
-This repository does not currently include a license file. If you plan to publish it publicly, add a license before the first public release.
-
-## Next steps
-
-Potential improvements for a production-ready public version:
-
-- add Docker Compose for full local orchestration
-- add a root-level Makefile
-- add a proper CI pipeline
-- add a sample dataset and demo walkthrough
-- add deployment docs for AWS and frontend hosting
